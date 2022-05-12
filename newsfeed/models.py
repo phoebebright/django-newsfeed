@@ -115,6 +115,7 @@ class Subscriber(models.Model):
     verified = models.BooleanField(default=False)
     subscribed = models.BooleanField(default=False)
     verification_sent_date = models.DateTimeField(blank=True, null=True)
+    extra = models.JSONField(default={})
 
     created_at = models.DateTimeField(auto_now_add=True)
 

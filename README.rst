@@ -1,6 +1,12 @@
 django-newsfeed
 ===============
 
+Customised Version - May 22
+- use django-bootstrap-v5 to render templates/forms
+- adding extras json field to subscriber to handle additional data on subscribe form
+- alter subscribe form to capture custom data
+
+
 .. image:: https://badge.fury.io/py/django-newsfeed.svg
     :target: https://badge.fury.io/py/django-newsfeed
 

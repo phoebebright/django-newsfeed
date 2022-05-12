@@ -97,8 +97,12 @@ class NewsletterSubscribeView(SubscriptionAjaxResponseMixin):
     def form_valid(self, form):
         email_address = form.cleaned_data.get('email_address')
 
+        extra = form.cleaned_data
+        extra.pop('email_address')
+
         subscriber, created = Subscriber.objects.get_or_create(
-            email_address=email_address
+            email_address=email_address,
+            defaults = {'extra': extra},
         )
 
         if not created and subscriber.subscribed:
